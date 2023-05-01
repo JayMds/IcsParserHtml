@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Pour tout les écrans indifferement */
+html {
+}
+
+.svgGroup {
+}
+
+.menu {
+    display: none;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+body {
+    font-family: "Montserrat Thin", sans-serif;
+    padding: 15px;
+    width: 100%;
+}
+
+.spanFromCalendar {
+    font-weight: bold;
+    display: inline-block;
+    width: 22%;
+}
+
+.filterMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.btn {
+    -width: 50%;
+}
+
+.ulZones {
+    margin: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none !important;
+    padding: 10px;
+    border: solid dimgrey thin;
+    border-radius: 15px;
+}
+
+.divHeader {
+    background-color: #efefef;
+    border-radius: 15px;
+    display: grid;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+.calendarTitle {
+    font-weight: bold;
+}
+
+.divChildContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.subDiv {
+    padding: 15px;
+    grid-template-columns: auto;
+    border: solid black thin;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px darkgray;
+    box-sizing: border-box;
+}
+
+.subDivTitle {
+    text-align: center;
+    background-color: #efefef;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.autumn {
+    background-image: url("img/leaf.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 95%;
+    background-position-y: 80%;
+
+}
+
+.winter {
+    background-image: url("img/snowflakes.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 95%;
+    background-position-y: 80%;
+}
+
+.spring {
+    background-image: url("img/sakura.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 95%;
+    background-position-y: 80%;
+}
+
+.summer {
+    background-image: url("img/sun.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 95%;
+    background-position-y: 80%;
+}
+
+.show {
+    transition: opacity 0.5s linear;
+    opacity: 1;
+    position: relative;
+}
+
+.hide {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.current {
+    color: white !important;
+    background-color: #636262;
+}
+
+/* Pour tout les appreils dont l'ecran est inférieur à 425px */
+@media (max-width: 785px) {
+
+    .filterAndNavGroup {
+        z-index: 1;
+        visibility: hidden;
+        background-color: white;
+        position: absolute;
+        width: 0%;
+        height: 0%;
+    }
+
+    .filterMenu {
+        display: flex;
+        flex-direction: column ;
+    }
+
+    .svgGroup {
+
+    }
+
+    .menu {
+        display: block;
+        width: 30px;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .divChildContainer {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .calendarTitle {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .calendarSubTitle {
+        font-size: 20px;
+    }
+
+    .spanFromCalendar {
+        font-size: 9px;
+    }
+
+    .subDiv {
+        font-size: 9px;
+        padding: 15px;
+        grid-template-columns: auto;
+        border: solid black thin;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px darkgray;
+        box-sizing: border-box;
+    }
+
+    .subDivTitle {
+        text-align: center;
+        background-color: #efefef;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px;
+    }
+    #menuToggle:checked ~ .filterAndNavGroup {
+        visibility: visible;
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr ;
+        width: 75%;
+        height: 100%;
+        -transition:all 0.5s linear;
+    }
+}
