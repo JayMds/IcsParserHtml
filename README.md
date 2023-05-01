@@ -45,4 +45,5 @@ Acceder via le navigateur au site web via localhost:[portVm] ici monsite.jcm.com
 
 
 ### Auteurs:
-![FredM](https://secure.gravatar.com/avatar/155d9315150175b7ab245ad11d4a647b?d=identicon&r=G&s=80, "FredM")
+
+JayMds (Jinkuro)
